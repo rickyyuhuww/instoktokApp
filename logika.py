@@ -1,6 +1,6 @@
 from datetime import datetime
 
-
+"""ZIDANE (Class Barang dan fungsi validasi_input_barang())"""
 def validasi_input_barang(kode: str, nama: str, harga: float, stok_awal: int, stok_min: int) -> tuple[bool, str]:
     """Memvalidasi data master barang sebelum ditambahkan ke inventaris."""
     if not kode.strip() or not nama.strip():
@@ -48,6 +48,7 @@ class Barang:
             "Nilai Aset": self.nilai_aset(),
         }
 
+"""RIFQI (Class InventarisToko, Class Transaksi dan fungsi rekursif hitung_total_stok())"""
 
 class Transaksi:
     """Class induk untuk pencatatan mutasi stok barang."""
@@ -137,7 +138,7 @@ class InventarisToko:
             self.riwayat_transaksi.append(trx)
         return berhasil, pesan
 
-
+"""ZASKIA (Fungsi filter_stok_menipis() dan ringkasan_mutasi())"""
 def hitung_total_stok(daftar_barang: list[Barang], indeks: int = 0) -> int:
     """Menghitung total seluruh unit stok secara rekursif."""
     if indeks >= len(daftar_barang):

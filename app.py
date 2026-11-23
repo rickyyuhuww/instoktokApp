@@ -21,7 +21,7 @@ if "inventaris" not in st.session_state:
 
 inventaris: InventarisToko = st.session_state.inventaris
 
-
+"""RAJA (Fungsi render_form_transaksi() dan tampilkan_tabel_stok())"""
 def render_form_barang():
     """Menampilkan form penambahan master barang baru."""
     with st.form("form_tambah_barang", clear_on_submit=True):
